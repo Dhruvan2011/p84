@@ -5,8 +5,8 @@ img_width = 300;
 img_height = 100;
 
 var img_image;
-img_x = 100;
-img_y = 100;
+img_x = 250;
+img_y = 250;
 
 function add() {
 	img_imgTag = new Image();
@@ -38,16 +38,23 @@ function my_keydown(e)
 	}
 
 	if((keyPressed >=37 && keyPressed<=40))
-   {
+{
 	arrowkey();
-	document.getElementById("d1").innerHTML="You pressed arrow key";
-   }
+	document.getElementById("d1").innerHTML="You pressed aplhabet key";
+}
 
-   if((keyPressed >=17 && keyPressed<=18)|| (keyPressed =27))
-   {
+
+if((keyPressed  >=17 && keyPressed <=18 && keyPressed <=27))
+{
 	specialkey();
-	document.getElementById("d1").innerHTML="You pressed special key";
-   }
+	document.getElementById("d1").innerHTML="You pressed Spical key";
+}
+
+if((keyPressed  >=13 && keyPressed <=16 && keyPressed <=46))
+{
+	otherkey();
+	document.getElementById("d1").innerHTML="You pressed other key";
+}
 
 }
 
@@ -69,7 +76,7 @@ function arrowkey()
 function specialkey()
 {
 	img_image="spkey.png";
-add();
+    add();
 }
 function otherkey()
 {
